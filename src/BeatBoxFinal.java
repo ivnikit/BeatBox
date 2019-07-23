@@ -40,9 +40,6 @@ public class BeatBoxFinal {
     int[] instruments = {35, 42, 46, 38, 49, 39, 50, 60, 70, 72, 64, 56, 58, 47, 67, 63};
 
 
-    public static void main(String[] args) {
-        new BeatBoxFinal().startUp("Flash");
-    }
 
     /**
      *  A method to launch program.
@@ -63,8 +60,8 @@ public class BeatBoxFinal {
             System.out.println("couldn't connect - you'll have to play alone.");
         }
         /**Links to used methods.
-        * @see setUpMidi
-        * @see buildGUI
+         * @see setUpMidi
+         * @see buildGUI
          * */
         setUpMidi();
         buildGui();
