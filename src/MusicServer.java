@@ -12,10 +12,9 @@ import java.util.Iterator;
 public class MusicServer {
     ArrayList<ObjectOutputStream> clientOutputStreams;
 
-    public static void main(String[] args) {
-        new MusicServer().go();
-    }
-
+    /**
+     * The thread for receive information from client
+     */
     public class ClientHandler implements Runnable {
         ObjectInputStream in;
         Socket clientSocket;
@@ -44,7 +43,9 @@ public class MusicServer {
         }
     }
 
-
+    /**
+     * The server setup and connection with client
+     */
     public void go() {
         clientOutputStreams = new ArrayList<ObjectOutputStream>();
         try {
@@ -63,6 +64,12 @@ public class MusicServer {
         }
     }
 
+    /**
+     * The method for send objects to the client
+     *
+     * @param one
+     * @param two
+     */
     public void tellEveryone(Object one, Object two) {
         Iterator it = clientOutputStreams.iterator();
         while (it.hasNext()) {
