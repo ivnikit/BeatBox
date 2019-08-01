@@ -1,12 +1,12 @@
 public class BeatBoxApplication {
     /**
-     * The method for launch BeatBoxFinal.
+     * The class for launch BeatBox.
      *
      * @param args
      * @use startUp
      */
 
     public static void main(String[] args) {
-        new BeatBoxFinal().startUp("Flash");
+        startUp.startUp("Flash");
     }
 }

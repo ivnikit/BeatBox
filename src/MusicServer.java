@@ -5,9 +5,11 @@ import java.net.Socket;
 import java.util.ArrayList;
 import java.util.Iterator;
 
+
 /**
  * BeatBox server.
  */
+
 
 public class MusicServer {
     ArrayList<ObjectOutputStream> clientOutputStreams;
@@ -15,6 +17,7 @@ public class MusicServer {
     /**
      * The thread for receive information from client
      */
+
     public class ClientHandler implements Runnable {
         ObjectInputStream in;
         Socket clientSocket;
@@ -46,6 +49,7 @@ public class MusicServer {
     /**
      * The server setup and connection with client
      */
+
     public void go() {
         clientOutputStreams = new ArrayList<ObjectOutputStream>();
         try {
@@ -70,6 +74,7 @@ public class MusicServer {
      * @param one
      * @param two
      */
+
     public void tellEveryone(Object one, Object two) {
         Iterator it = clientOutputStreams.iterator();
         while (it.hasNext()) {
